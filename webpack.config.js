@@ -1,4 +1,5 @@
 import path from 'path';
+import webpack from 'webpack';
 
 export default {
   entry: './index.js', // Entry point of your application
@@ -23,6 +24,22 @@ export default {
   },
   resolve: {
     extensions: ['.js', '.jsx'], // Resolve these file extensions
+    fallback: {
+      "zlib": require.resolve("browserify-zlib"),
+      "path": require.resolve("path-browserify"),
+      "crypto": require.resolve("crypto-browserify"),
+      "fs": false,
+      "http": require.resolve("stream-http"),
+      "net": false,
+      "stream": require.resolve("stream-browserify"),
+      "querystring": require.resolve("querystring-es3"),
+    },
   },
+  plugins: [
+    new webpack.ProvidePlugin({
+      process: 'process/browser',
+      Buffer: ['buffer', 'Buffer'],
+    }),
+  ],
   mode: 'production', // Set the mode to production
 };
