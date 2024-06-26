@@ -10,14 +10,6 @@
     [plugins.inputs]
     audits = ["performance", "seo", "best-practices", "accessibility", "pwa"]
     audit_url = "/"
-    thresholds = {
-      "performance": 90,
-      "seo": 90,
-      "best-practices": 90,
-      "accessibility": 90,
-      "pwa": 90
-    }
+    thresholds = { performance = 90, seo = 90, best-practices = 90, accessibility = 90, pwa = 90 }
     output_path = "lighthouse-report.html"
-    settings = {
-      onlyCategories = ["performance", "seo", "best-practices", "accessibility", "pwa"]
-    }
+    settings = { onlyCategories = ["performance", "seo", "best-practices", "accessibility", "pwa"] }
