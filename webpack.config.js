@@ -1,7 +1,7 @@
 import path from 'path';
 
 export default {
-  entry: './src/index.js', // Entry point of your application
+  entry: './index.js', // Entry point of your application
   output: {
     path: path.resolve('dist'), // Output directory
     filename: 'bundle.js', // Output file name
