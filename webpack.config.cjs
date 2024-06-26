@@ -4,8 +4,9 @@ import webpack from 'webpack';
 export default {
   entry: './src/index.js', // Entry point of your application
   output: {
-    path: path.resolve('dist'), // Output directory
+    path: path.resolve(__dirname, 'dist'), // Output directory (resolved to 'dist' in the current directory)
     filename: 'bundle.js', // Output file name
+    clean: true, // Clean the 'dist' directory before each build
   },
   module: {
     rules: [
@@ -14,6 +15,9 @@ export default {
         exclude: /node_modules/, // Exclude node_modules directory
         use: {
           loader: 'babel-loader', // Use Babel loader for transpiling JavaScript
+          options: {
+            presets: ['@babel/preset-env'], // Babel presets
+          },
         },
       },
       {
