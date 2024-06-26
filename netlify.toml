@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[[plugins]]
+  package = "@sentry/netlify-build-plugin"
+  [plugins.inputs]
+    sentryOrg = "nazzel-facebook-messenger-bots"
+    sentryProject = "4507496486731776"
+    # Other plugin inputs as needed
