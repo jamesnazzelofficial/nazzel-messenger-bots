@@ -1,5 +1,5 @@
 [build]
-  command = "webpack --config webpack.config.js && npm run build"
+  command = "webpack --config \"C:/Users/Nathalie Jean/Documents/GitHub/nazzel-messenger-bots/webpack.config.js\" && npm run build"
   publish = "dist"
 
 [build.environment]
@@ -8,8 +8,8 @@
 [[plugins]]
   package = "@netlify/plugin-lighthouse"
   [plugins.inputs]
-    audits = ["performance", "seo", "best-practices", "accessibility", "pwa"]
-    audit_url = "/"
-    thresholds = { performance = 90, seo = 90, best-practices = 90, accessibility = 90, pwa = 90 }
-    output_path = "lighthouse-report.html"
-    settings = { onlyCategories = ["performance", "seo", "best-practices", "accessibility", "pwa"] }
+  audits = ["performance", "seo", "best-practices", "accessibility", "pwa"]
+  audit_url = "/"
+  thresholds = { performance = 90, seo = 90, best-practices = 90, accessibility = 90, pwa = 90 }
+  output_path = "lighthouse-report.html"
+  settings = { onlyCategories = ["performance", "seo", "best-practices", "accessibility", "pwa"] }
