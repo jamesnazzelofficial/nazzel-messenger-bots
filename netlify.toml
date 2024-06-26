@@ -1,21 +1,11 @@
 [build]
-  command = "npm run build"
-  publish = "dist"
+command = "npm run build"
+publish = "dist"
+
+[build.environment]
+NODE_VERSION = "14"
 
 [[plugins]]
-  package = "@netlify/plugin-lighthouse"
-
-[[plugins]]
-  package = "@sentry/netlify-build-plugin"
-
-[[plugins]]
-  package = "@netlify/plugin-emails"
-
-[[plugins]]
-  package = "netlify-plugin-webpack"
-  # Add any specific configuration for the webpack plugin if needed
-
-[[headers]]
-  for = "/*"
-    [headers.values]
-      Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'"
+package = "@netlify/plugin-lighthouse"
+  [plugins.inputs]
+  budgetPath = "lighthouse-budget.json"
