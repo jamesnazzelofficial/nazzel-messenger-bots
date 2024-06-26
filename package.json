@@ -1,4 +1,12 @@
 {
+  "name": "nazzel-messenger-bot",
+  "version": "1.0.0",
+  "description": "Kausap Messenger bots source never to be public",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "webpack --config webpack.config.js"
+  },
   "dependencies": {
     "axios": "^1.7.2",
     "body-parser": "^1.20.2",
