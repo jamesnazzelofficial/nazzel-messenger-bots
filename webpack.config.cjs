@@ -1,27 +1,28 @@
-import { fileURLToPath } from 'url';
 import path from 'path';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
 export default {
-  entry: './src/index.js',
+  entry: './src/index.js', // Entry point of your application
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    path: path.resolve('dist'), // Output directory
+    filename: 'bundle.js', // Output file name
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
+        test: /\.js$/, // Apply this rule to .js files
+        exclude: /node_modules/, // Exclude node_modules directory
         use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
-        }
-      }
-    ]
-  }
+          loader: 'babel-loader', // Use Babel loader for transpiling JavaScript
+        },
+      },
+      {
+        test: /\.css$/, // Apply this rule to .css files
+        use: ['style-loader', 'css-loader'], // Use style-loader and css-loader
+      },
+    ],
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'], // Resolve these file extensions
+  },
+  mode: 'production', // Set the mode to production
 };

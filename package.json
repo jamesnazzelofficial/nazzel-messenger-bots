@@ -3,28 +3,26 @@
   "version": "1.0.0",
   "description": "Kausap Messenger bots source never to be public",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "start": "node index.js"
   },
   "dependencies": {
     "axios": "^1.7.2",
-    "body-parser": "^1.20.2",
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2",
-    "helmet": "^7.1.0",
-    "openai": "^4.52.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^4.1.1",
+    "openai": "^4.52.1",
     "request": "^2.88.2",
-    "uuid": "^9.0.1"
+    "uuid": "^8.3.1"
   },
   "devDependencies": {
-    "webpack": "^5.0.0",
-    "webpack-cli": "^4.0.0"
-  },
-  "type": "module",
-  "webpack": {
-    "module-bind": {
-      "js": "cjs-loader"
-    }
+    "babel-loader": "^8.3.0",
+    "css-loader": "^5.2.7",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.92.1",
+    "webpack-cli": "^4.10.0"
   }
 }
