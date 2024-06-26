@@ -2,7 +2,7 @@ import path from 'path';
 import webpack from 'webpack';
 
 export default {
-  entry: './index.js', // Entry point of your application
+  entry: './src/index.js', // Entry point of your application
   output: {
     path: path.resolve('dist'), // Output directory
     filename: 'bundle.js', // Output file name
