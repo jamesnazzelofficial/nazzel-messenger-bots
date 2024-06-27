@@ -1,15 +1,28 @@
-[build]
-  command = "npm run start"
-  publish = "."
-
-[build.environment]
-  NODE_VERSION = "22"
-
-[[plugins]]
-  package = "@netlify/plugin-lighthouse"
-  [plugins.inputs]
-    audits = ["performance", "seo", "best-practices", "accessibility", "pwa"]
-    audit_url = "/"
-    thresholds = { performance = 90, seo = 90, best-practices = 90, accessibility = 90, pwa = 90 }
-    output_path = "lighthouse-report.html"
-    settings = { onlyCategories = ["performance", "seo", "best-practices", "accessibility", "pwa"] }
+{
+  "name": "nazzel-messenger-bot",
+  "version": "1.0.0",
+  "description": "Kausap Messenger bots source never to be public",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "body-parser": "^1.19.0",
+    "browserify-zlib": "^0.2.0",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^4.1.1",
+    "openai": "^4.52.1",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
+    "querystring-es3": "^0.2.1",
+    "request": "^2.88.2",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "uuid": "^8.3.1"
+  }
+}
