@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facebook Messenger Bot</title>
+  <link rel="stylesheet" href="assets/styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+  <header>
+    <h1>Facebook Messenger Bot</h1>
+    <p>Welcome to our Messenger bot!</p>
+  </header>
+
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p>If you have any questions, feel free to contact us:</p>
+    <form action="submit-contact.php" method="post">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+      
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+      
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="4" required></textarea><br><br>
+      
+      <label for="preferred_contact">Preferred Contact Method:</label><br>
+      <select id="preferred_contact" name="preferred_contact" required>
+        <option value="email">Email</option>
+        <option value="telegram">Telegram</option>
+        <!-- Add more options for other contact methods as needed -->
+        <!-- Example for Discord -->
+        <option value="discord">Discord</option>
+        <!-- Example for Google -->
+        <option value="google">Google</option>
+      </select><br><br>
+      
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; Copyright All rights reserved Made by Nazzel Official 2024</p>
+  </footer>
+
+  <script src="assets/loader.js"></script> <!-- Link to your loader.js file -->
+</body>
+</html>
