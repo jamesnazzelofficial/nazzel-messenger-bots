@@ -19,10 +19,10 @@ app.use('/webhook', webhookRoutes);
 // Error handling middleware
 app.use((err, req, res, next) => {
   console.error('Error:', err.stack);
-  res.status(500).send('Something broke!');
+  res.status(500).send('Internal Server Error');
 });
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
