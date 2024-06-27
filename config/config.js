@@ -1,10 +1,6 @@
-
 module.exports = {
-    PAGE_ACCESS_TOKEN: 'your_page_access_token_here',
-    VERIFY_TOKEN: 'your_verification_token_here',
-    WEATHER_API_KEY: 'your_weather_api_key_here',
-    NEWS_API_KEY: 'your_news_api_key_here',
-    YOUTUBE_API_KEY: 'your youtube api key here',
+    WEATHER_API_KEY: 'a0f6a46edf15fb3758066b5d3d5c50ac',
+    NEWS_API_KEY: '11c60af4213e473587aeb85d9d32ad69',
+    YOUTUBE_API_KEY: 'your_youtube_api_key_here',
     // Other configurations as needed
-  };
-  
+};
