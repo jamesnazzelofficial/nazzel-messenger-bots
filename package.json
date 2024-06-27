@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "build": "npm run clean && npm run build-process && npm run post-process",
+    "build": "npm run clean && npm run build && npm run build-process && npm run post-process",
     "clean": "rm -rf dist",  // Example clean-up command, adjust as needed
     "build-process": "echo 'Running build process'",  // Example build process command
     "post-process": "echo 'Running post-processing'"  // Example post-processing command
